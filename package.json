@@ -1,0 +1,17 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "description": "htmx website for recipes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "marked": "^12.0.0",
+    "pug": "^3.0.2"
+  }
+}
