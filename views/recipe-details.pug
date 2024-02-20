@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= recipe.title
+    link(rel="stylesheet", href="/path/to/your/css/styles.css")
+  body
+    div#main-content
+      h1= recipe.title
+      if recipe.images
+        each img in recipe.images
+          img(src=`/path/to/images/${img}`, alt=`Image of ${recipe.title}`)
+      if recipe.ingredients
+        h2 Ingredients
+        ul
+          each ingredient in recipe.ingredients
+            li= ingredient
+      if recipe.steps
+        h2 Steps
+        != markdown
+      a(href="/" hx-get="/" hx-target="#main-content" hx-swap="outerHTML") Back to recipes

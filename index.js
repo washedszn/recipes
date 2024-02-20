@@ -1,6 +1,5 @@
 const express = require('express');
 const pug = require('pug');
-const marked = require('marked');
 const compression = require('compression');
 
 const PORT = process.env.PORT || 3000;
@@ -16,9 +15,8 @@ app.use(compression());
 app.get('/', (req, res) => {
     // render list of all recipes as little cards
     const template = pug.compileFile('./views/recipe-list.pug');
-    const markdown = marked(); // maybe dont need this
-    const markup = template({}) // maybe dont need this
-    res.send(markup);
+    const result = template({recipes});
+    res.send(result);
 });
 
 app.get('/:id', (req, res) => {
@@ -26,8 +24,7 @@ app.get('/:id', (req, res) => {
     const { id } = req.params;
     const recipe = recipes.find(r => r.id == id);
     const template = pug.compileFile('./views/recipe-details.pug');
-    const markdown = marked(recipe.content);
-    const markup = template({ recipe, markdown });
+    const markup = template({ recipe });
     res.send(markup)
 })
 

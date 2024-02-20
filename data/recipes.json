@@ -1,1 +1,27 @@
-[]
+[{
+    "id": 1,
+    "title": "test",
+    "images": [],
+    "ingredients": ["potato", "onion"],
+    "steps": ["peel potat", "cut onion"]
+},
+{
+    "id": 2,
+    "title": "test",
+    "images": [],
+    "ingredients": ["potato", "onion"],
+    "steps": ["peel potat", "cut onion"]
+},
+{
+    "id": 3,
+    "title": "test",
+    "images": [],
+    "ingredients": ["potato", "onion"],
+    "steps": ["peel potat", "cut onion"]
+},{
+    "id": 4,
+    "title": "test",
+    "images": [],
+    "ingredients": ["potato", "onion"],
+    "steps": ["peel potat", "cut onion"]
+}]

@@ -1,1 +1,16 @@
-p yo
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Recipes
+    link(rel="stylesheet", href="assets/styles.css")
+  body
+    h1 Recipes
+    div#recipe-list
+      each recipe in recipes
+        a(href=`/${recipe.id}` hx-get=`/${recipe.id}` hx-target="#main-content" hx-swap="outerHTML") 
+          .card
+            h2= recipe.title
+            // Optional: p= recipe.description
+            // Optional: img(src=`/path/to/images/${recipe.image}`, alt=`Image of ${recipe.title}`)
